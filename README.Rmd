@@ -35,14 +35,14 @@ knitr::opts_chunk$set(
 invisible(Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF-8"))
 ```
 
-# eplusbuilder
+# eplusbuildr
 
-[![Travis-CI Build Status](https://travis-ci.com/hongyuanjia/eplusbuilder.svg?branch=master)](https://travis-ci.com/hongyuanjia/eplusbuilder)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/hongyuanjia/eplusbuilder?branch=master&svg=true)](https://ci.appveyor.com/project/hongyuanjia/eplusbuilder)
-[![codecov](https://codecov.io/gh/hongyuanjia/eplusbuilder/branch/master/graph/badge.svg)](https://codecov.io/gh/hongyuanjia/eplusbuilder)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/eplusbuilder)](https://cran.r-project.org/package=eplusbuilder)
-[![CRAN Checks](https://cranchecks.info/badges/summary/eplusbuilder)](https://cranchecks.info/pkgs/eplusbuilder)
-[![CRAN Download Badge](https://cranlogs.r-pkg.org/badges/eplusbuilder)](https://cran.r-project.org/package=eplusbuilder)
+[![Travis-CI Build Status](https://travis-ci.com/hongyuanjia/eplusbuildr.svg?branch=master)](https://travis-ci.com/hongyuanjia/eplusbuildr)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/hongyuanjia/eplusbuildr?branch=master&svg=true)](https://ci.appveyor.com/project/hongyuanjia/eplusbuildr)
+[![codecov](https://codecov.io/gh/hongyuanjia/eplusbuildr/branch/master/graph/badge.svg)](https://codecov.io/gh/hongyuanjia/eplusbuildr)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/eplusbuildr)](https://cran.r-project.org/package=eplusbuildr)
+[![CRAN Checks](https://cranchecks.info/badges/summary/eplusbuildr)](https://cranchecks.info/pkgs/eplusbuildr)
+[![CRAN Download Badge](https://cranlogs.r-pkg.org/badges/eplusbuildr)](https://cran.r-project.org/package=eplusbuildr)
 
 > A collection of useful functions to work with eplusr.
 
