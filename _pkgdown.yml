@@ -1,0 +1,24 @@
+destination: docs
+
+reference:
+  - title: Clean
+    contents:
+      - purge_object
+      - merge_object
+  - title: Schedule
+    contents:
+      - schedule_year_to_compact
+  - title: Rename
+    contents:
+      - rename_per_field
+      - rename_per_fun
+  - title: eplusr Hehavior
+    contents:
+      - with_eplusr_option
+      - with_check_disabled
+      - with_no_verbose
+  - title: Helpers
+    contents:
+      - toCamelCase
+      - verify_group
+      - verify_class

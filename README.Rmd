@@ -46,6 +46,49 @@ invisible(Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF-8"))
 
 > A collection of useful functions to work with eplusr.
 
+## Installation
+
+Currently eplusbuidr is not on CRAN yet. You can install the development version
+from GitHub.
+
+```{r gh-installation, eval = FALSE}
+# install.packages("remotes")
+remotes::install_github("hongyuanjia/eplusbuildr")
+```
+
+## Get started
+
+```{r}
+library(eplusr)
+library(eplusbuildr)
+
+# read model
+idf <- read_idf(file.path(eplus_config(8.8)$dir, "ExampleFiles", "RefBldgLargeHotelNew2004_Chicago.idf"))
+
+# Remove not-used objects
+purge_object(idf, "Material")
+
+# Merge same objects into one
+merge_object(idf, "Schedule:Compact")
+
+# Rename objects using function
+# purrr-like function definition supported
+idf$object_name("ZoneHVAC:FourPipeFanCoil")
+
+rename_per_fun(idf, "ZoneHVAC:FourPipeFanCoil",
+    ~gsub("fan coil", "four-pipe fan coil", .x)
+)
+
+idf$object_name("ZoneHVAC:FourPipeFanCoil")
+
+# Rename objects based on class and fielf values
+idf$object_name("People")
+
+rename_per_field(idf, "People", "Zone or ZoneList Name")
+
+idf$object_name("People")
+```
+
 ## Author
 
 Hongyuan Jia

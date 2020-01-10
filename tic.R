@@ -9,6 +9,9 @@ build_args <- c("--force")
 # https://github.com/travis-ci/travis-ci/issues/7875
 if (.Platform$OS.type == "windows" || Sys.getenv("TRAVIS_OS_NAME") == "osx") args <- c("--no-manual", args)
 
+# install EnergyPlus
+get_stage("after_install") %>% add_code_step(eplusr::install_eplus(8.8, local = TRUE))
+
 do_package_checks(args = args, build_args = build_args)
 
 # pkgdown
@@ -16,3 +19,9 @@ do_package_checks(args = args, build_args = build_args)
 if (ci_get_branch() == "master" && Sys.getenv("TRAVIS_OS_NAME") == "linux" && Sys.getenv("TRAVIS_R_VERSION_STRING") == "release") {
     do_pkgdown(document = TRUE, orphan = TRUE)
 }
+
+# codecov
+if (Sys.getenv("TRAVIS_OS_NAME") == "linux" && Sys.getenv("TRAVIS_R_VERSION_STRING") == "devel") {
+    get_stage("deploy") %>% add_code_step(covr::codecov())
+}
+

@@ -1,4 +1,4 @@
-Package: eplusbuilder
+Package: eplusbuildr
 Title: A collection of useful functions to work with eplusr
 Version: 0.0.0.9000
 Authors@R:
@@ -14,6 +14,7 @@ BugReports: https://github.com/hongyuanjia/eplusbuilder/issues
 Depends:
     R (>= 3.2.0)
 Imports:
+    data.table,
     eplusr
 Suggests:
     testthat,
@@ -25,7 +26,7 @@ Encoding: UTF-8
 LazyData: true
 SystemRequirements: EnergyPlus (>= 8.3, optional) (<https://energyplus.net>)
 Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate"))
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 VignetteBuilder: knitr
 Remotes:
     hongyuanjia/eplusr
